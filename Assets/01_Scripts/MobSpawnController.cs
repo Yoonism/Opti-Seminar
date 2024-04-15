@@ -10,6 +10,7 @@ public class MobSpawnController : MonoBehaviour
 
     private void SpawnNewMob(Vector3 positionVariation)
     {
+        // 새로운 몹을 지정된 위치에 생성합니다
         Instantiate(mobPrefab, transform.position + positionVariation, Quaternion.identity);
     }
 
