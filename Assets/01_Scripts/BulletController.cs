@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(Lifetime());
     }
@@ -15,13 +15,46 @@ public class BulletController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        DestroyBullet();
+    }
+
+
+
+    private void DestroyBullet()
+    {
+        PoolingManager.Instance.StandbyToPool(gameObject);
+        //Destroy(gameObject);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 미사용 영역 ---------------------------------------------------------------------------
+    private void OnDisable()
+    {
+        StopAllCoroutines();    
     }
 
     private IEnumerator Lifetime()
     {
         yield return new WaitForSeconds(5f);
 
-        Destroy(gameObject);
+        DestroyBullet();
     }
+
 }

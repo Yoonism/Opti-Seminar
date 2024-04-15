@@ -6,7 +6,8 @@ public class TurretController : MonoBehaviour
 {
     private void FireTurret()
     {
-        Instantiate(turretPrefab, transform.position, transform.localRotation);
+        PoolingManager.Instance.ActivateFromPool(_bulletPrefab, transform.position, transform.localRotation);
+        //Instantiate(_bulletPrefab, transform.position, transform.localRotation);
     }
 
 
@@ -30,7 +31,7 @@ public class TurretController : MonoBehaviour
     [SerializeField]
     private float turretFireDelay = 0.3f;
     [SerializeField]
-    private GameObject turretPrefab;
+    private GameObject _bulletPrefab;
     private Quaternion _baseQuaternion;
 
     private void Start()
