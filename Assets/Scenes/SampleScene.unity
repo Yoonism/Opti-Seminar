@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7994c3dc052b3e4795920d46b547009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretFireDelay: 0.06
+  turretFireDelay: 0.05
   _bulletPrefab: {fileID: 2720604675080276284, guid: c2c229bb3d41fda4382ceda4c9bc820f,
     type: 3}
 --- !u!4 &315671558
@@ -547,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 315671556}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.58, y: 5.61, z: 65.56}
+  m_LocalPosition: {x: -3.84, y: 5.61, z: 65.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -726,10 +726,10 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.268
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7994c3dc052b3e4795920d46b547009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretFireDelay: 0.06
+  turretFireDelay: 0.05
   _bulletPrefab: {fileID: 2720604675080276284, guid: c2c229bb3d41fda4382ceda4c9bc820f,
     type: 3}
 --- !u!4 &606403778
@@ -1249,7 +1249,7 @@ Transform:
   m_GameObject: {fileID: 606403776}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3.97, y: 5.61, z: 65.56}
+  m_LocalPosition: {x: 5.09, y: 5.61, z: 65.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

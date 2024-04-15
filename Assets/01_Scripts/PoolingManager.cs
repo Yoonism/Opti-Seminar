@@ -22,18 +22,18 @@ public class PoolingManager : MonoBehaviour
     }
 
 
-    public GameObject ActivateFromPool(GameObject newPrefab, Vector3 newPosition, Quaternion newRotation)
+    public GameObject Wakeup(GameObject newPrefab, Vector3 newPosition, Quaternion newRotation)
     {
         GameObject tempGameObject;
 
         if(_standbyPool.Count > 0)
         {
             tempGameObject = _standbyPool[0];
+            _standbyPool.Remove(tempGameObject);
+
             tempGameObject.SetActive(true);
             tempGameObject.transform.position = newPosition;
             tempGameObject.transform.localRotation = newRotation;
-
-            _standbyPool.RemoveAt(0);
         }
         else
         {
@@ -44,7 +44,7 @@ public class PoolingManager : MonoBehaviour
         return tempGameObject;
     }
 
-    public void StandbyToPool(GameObject targetGameObject)
+    public void Sleep(GameObject targetGameObject)
     {
         targetGameObject.SetActive(false);
         _standbyPool.Add(targetGameObject);

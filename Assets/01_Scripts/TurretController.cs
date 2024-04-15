@@ -6,8 +6,8 @@ public class TurretController : MonoBehaviour
 {
     private void FireTurret()
     {
-        PoolingManager.Instance.ActivateFromPool(_bulletPrefab, transform.position, transform.localRotation);
-        //Instantiate(_bulletPrefab, transform.position, transform.localRotation);
+        // 총알을 터렛 위치에 생성합니다
+        Instantiate(_bulletPrefab, transform.position, transform.localRotation);
     }
 
 

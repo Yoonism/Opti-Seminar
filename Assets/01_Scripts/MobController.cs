@@ -43,6 +43,9 @@ public class MobController : MonoBehaviour
 
 
 
+
+
+
     // 미사용 영역 ---------------------------------------------------------------------------
 
     private float movementSpeed = 12f;
